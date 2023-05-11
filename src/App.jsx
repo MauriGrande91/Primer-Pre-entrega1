@@ -10,10 +10,11 @@ function App() {
 
   return (
     <>
+    <h1>hola mundo</h1>
    <NavBar/>
-   <ItemListContainer greeting={"Bienvenidos"} />
+   <ItemListContainer/>
     </>
-  )
+  );
 }
 
 export default App
