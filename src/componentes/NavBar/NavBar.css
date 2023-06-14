@@ -1,7 +1,66 @@
-.imgLogo{
-    width: 17rem;
+.container-fluid{
+    display: flex;
+    height:5vw;
+  
 }
+
+header{
+    background-color:beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.imgLogo{
+    width: 11rem;
+}
+
+.Fuente{
+    font-family:sans-serif
+    
+   
+}
+
+ul{
+    position: sticky;
+    color: aliceblue;
+    align-items: center;
+    display: flex;
+    background-color:rgba(10, 20, 20, 0.925);
+    position: relative;
+    font-size: 1rem;
+    border-radius: 40px;
+    padding: 0 20px;
+    margin: 20px;
+}
+
+.nav-item{
+    color: aliceblue;
+ 
+
+}
+
 li{
     margin: 0 2rem;
     cursor: pointer;
+    padding: 0.5rem;
+    
+}
+
+nav{
+    box-shadow: 0 10px 40px rgba(red, green, blue, alpha);
+    position: sticky;
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+
+}
+.navbar{
+    position: sticky;
+}
+.enlace{
+    color:rgb(232, 235, 238);
+    text-decoration: none;
+    list-style-type: none;
+
 }

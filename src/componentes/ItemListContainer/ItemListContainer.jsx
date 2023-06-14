@@ -15,8 +15,8 @@ const ItemListContainer = () => {
   }, [idCategoria])
 
   return (
-    <div>
-      <h2 style={{ textAlign: "center" }}>Indumentaria</h2>
+    <div className="titulo">
+      <h2 style={{ textAlign: "center" }} >Indumentaria</h2>
       <ItemList productos={productos} />
     </div>
   )

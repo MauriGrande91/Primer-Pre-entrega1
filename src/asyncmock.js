@@ -1,8 +1,13 @@
 const productos =[
-    {nombre: "Top", precio: 3000, id: "1", img: "../img/top.jpg", idCat: "2" },
-    {nombre: "calza", precio: 5000, id: "2", img: "../img/calza.jpg", idCat: "2" },
-    {nombre: "calza larga", precio: 6000, id: "3", img: "../img/calzalarga.jpg", idCat:"3" },
-    {nombre: "Top de atras", precio: 3200, id: "4", img: "../img/topdeatras.jpg", idCat:"3" },
+    {nombre: "Calza A", precio: 6000, id: "3",stock:10, img: "../img/Calza.jpg", idCat:"3" },
+    {nombre: "Calza B", precio: 5000, id: "2",stock:10, img: "../img/Calza1.jpg", idCat: "3" }, 
+    {nombre: "Top 1", precio: 3200, id: "4",stock:10, img: "../img/Top2.jpg", idCat:"3" },
+    {nombre: "Top 2", precio: 3000, id: "1",stock:10, img: "../img/Top1.jpg", idCat: "3" },
+    {nombre: "Over 1", precio: 3000, id: "5",stock:10, img: "../img/Over1.jpg", idCat: "2" },
+    {nombre: "Over 2", precio: 3000, id: "6",stock:10, img: "../img/Over2.jpg", idCat: "2" },
+    {nombre: "Over 3", precio: 3000, id: "7",stock:10, img: "../img/Over3.jpg", idCat: "2" },
+    {nombre: "Over 4", precio: 3000, id: "8",stock:10, img: "../img/Over4.jpg", idCat: "2" },
+    {nombre: "Over 5", precio: 3000, id: "9",stock:10, img: "../img/Over5.jpg", idCat: "2" },
 ]
 
 export const getProductos=()=> {
@@ -14,7 +19,7 @@ export const getProductos=()=> {
 }
 
 export const getUnProducto =(id) => {
-    return new promise(resolve => {
+    return new Promise(resolve => {
         setTimeout (() =>{
         const producto = productos.find(prod => prod.id === id)
         resolve(producto);
@@ -26,7 +31,7 @@ export const getUnProducto =(id) => {
 export const getProductosPorCategoria =(idCategoria) => {
     return new Promise( resolve => {
         setTimeout ( ()=>{
-            const productosCategoria = productos.filter(prod.idCat === idCategoria)
+            const productosCategoria = productos.filter(prod=> prod.idCat === idCategoria)
 resolve(productosCategoria)
         }, 100)
     })
