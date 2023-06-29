@@ -5,7 +5,8 @@ import {getFirestore} from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDv26i6lUWO5TqEAPVKfMguEDRLSY9TPtM",
+  // apiKey: process.env.REACT_APP_FIREBASE_API_kEY,
+  apiKey:"AIzaSyDv26i6lUWO5TqEAPVKfMguEDRLSY9TPtM",
   authDomain: "yuzu-shoponline.firebaseapp.com",
   projectId: "yuzu-shoponline",
   storageBucket: "yuzu-shoponline.appspot.com",

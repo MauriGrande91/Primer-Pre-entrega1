@@ -1,5 +1,8 @@
 .titulo{
     text-align: center;
     color:aliceblue;
-    background-color:black
+    background-color: #77767c;
+}
+.contenedorProductos{
+    background-color: #961f96;
 }

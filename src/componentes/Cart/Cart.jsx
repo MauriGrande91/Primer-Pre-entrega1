@@ -4,32 +4,27 @@ import { CarritoContext } from "../../context/CarritoContext";
 import CartItem from "../CartItem/CArtItem";
 
 const Cart = () => {
-    const {carrito, vaciarCarrito} = useContext(CarritoContext);
+    const { carrito, vaciarCarrito, total, cantidadTotal } = useContext(CarritoContext);
 
-    
-    const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
 
-    
-    const total = carrito.reduce((total, producto)=> total + (producto.item.precio * producto.cantidad), 0);
-
-    if(totalCantidad === 0) {
+    if (cantidadTotal === 0) {
         return (
             <>
                 <h2>No hay productos en el carrito </h2>
-                <Link to='/'> Seguir Comprando </Link>
+                <Link className='miButn' to='/'> Seguir Comprando </Link>
             </>
         )
     }
 
-  return (
-    <div>
-        {carrito.map(producto => <CartItem key={producto.id} {...producto} />)}
-        <h3> Cantidad Total: {totalCantidad} </h3>
-        <h3> Total: $ {total}  </h3>
-        <button onClick={()=> vaciarCarrito()}> Vaciar Carrito </button>
-        <Link to="/checkout"> Finalizar Compra </Link>
-    </div>
-  )
+    return (
+        <div>
+            {carrito.map(producto => <CartItem key={producto.id} {...producto} />)}
+            <h3> Cantidad Total: {cantidadTotal} </h3>
+            <h3> Total: $ {total}  </h3>
+            <button className='miButn' onClick={() => vaciarCarrito()}> Vaciar Carrito </button>
+            <Link className='miButn' to="/checkout"> Finalizar Compra </Link>
+        </div>
+    )
 }
 
 export default Cart

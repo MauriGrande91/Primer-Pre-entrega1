@@ -17,12 +17,14 @@
     object-fit: contain;
 }
 
-.btnProducto{
-    background-color:cornflowerblue;
+.miBtn{
+    background-color:rgba(100, 148, 237, 0.719);
     color: white;
     font: 1.2rem;
     width: 8rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
 }
